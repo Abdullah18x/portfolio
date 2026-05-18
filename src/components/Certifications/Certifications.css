@@ -158,9 +158,15 @@
   transition: background .2s ease, color .2s ease, border-color .2s ease;
 }
 
-/* === Grid sliding animation === */
+/* === Grid sliding animation ===
+   Horizontal clip for the slide effect, vertical overflow stays visible
+   so card lifts, focus rings, and rounded corners aren't cut. */
 .cert-grid-viewport {
-  overflow: hidden;
+  overflow-x: clip;
+  overflow-y: visible;
+  overflow: hidden visible;
+  padding: 4px;
+  margin: -4px;
 }
 .cert-grid {
   animation-duration: .45s;
