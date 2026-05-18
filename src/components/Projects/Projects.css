@@ -1,0 +1,95 @@
+/* === Toolbar (pagination only, right-aligned) === */
+.projects-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 24px;
+}
+
+.projects-page-btn {
+  border: 1px solid var(--border) !important;
+  border-radius: 10px !important;
+  width: 36px !important;
+  height: 36px !important;
+  color: var(--text) !important;
+  transition: border-color .2s ease, background .2s ease;
+}
+.projects-page-btn:not(.Mui-disabled):hover {
+  border-color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 10%, var(--surface-alt)) !important;
+}
+.projects-page-btn.Mui-disabled { opacity: 0.4; }
+
+/* === Sliding animation === */
+.projects-grid-viewport {
+  overflow: hidden;
+}
+.projects-grid {
+  animation-duration: .45s;
+  animation-timing-function: cubic-bezier(0.2, 0.8, 0.2, 1);
+  animation-fill-mode: both;
+}
+.projects-grid--next { animation-name: projectsSlideInRight; }
+.projects-grid--prev { animation-name: projectsSlideInLeft; }
+
+@keyframes projectsSlideInRight {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes projectsSlideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .projects-grid { animation: none !important; }
+}
+
+@media (max-width: 600px) {
+  .projects-toolbar { justify-content: flex-end; }
+}
+
+.project-card {
+  height: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 26px;
+  display: flex;
+  flex-direction: column;
+  transition: border-color .25s ease, transform .25s ease;
+}
+.project-card:hover { border-color: var(--accent); transform: translateY(-2px); }
+.project-card:hover .project-arrow { color: var(--accent); transform: translate(2px, -2px); }
+
+.project-arrow {
+  display: inline-flex;
+  width: 36px; height: 36px;
+  align-items: center; justify-content: center;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--text-muted);
+  transition: color .25s ease, transform .25s ease;
+}
+
+.project-highlights {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 6px;
+}
+.project-highlights li {
+  position: relative;
+  padding-left: 16px;
+  font-size: 0.9rem;
+  color: var(--text);
+  line-height: 1.55;
+}
+.project-highlights li::before {
+  content: "";
+  position: absolute;
+  top: 0.7em; left: 0;
+  width: 6px; height: 1px;
+  background: var(--accent);
+}

@@ -1,0 +1,7 @@
+.home {
+  padding-left: var(--sidebar-width, 260px);
+  transition: padding-left .35s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+@media (max-width: 899.95px) {
+  .home { padding-left: 0; }
+}

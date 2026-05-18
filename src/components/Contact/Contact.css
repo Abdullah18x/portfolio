@@ -1,0 +1,32 @@
+.contact-section { border-bottom: none; }
+
+.contact-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: clamp(24px, 5vw, 44px);
+  max-width: 760px;
+  background-image:
+    radial-gradient(600px 200px at 100% 0%, color-mix(in srgb, var(--accent) 10%, transparent), transparent 60%);
+}
+
+.contact-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+.contact-actions .MuiButton-root {
+  width: 100%;
+  justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .contact-actions {
+    grid-template-columns: 1fr 1fr;
+  }
+  /* Primary "Email me" button spans full width on mobile */
+  .contact-actions .MuiButton-root:first-of-type {
+    grid-column: 1 / -1;
+  }
+}

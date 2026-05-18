@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#FAFAF7" />
+
+    <title>Abdullah Akram — Senior Full Stack Engineer | Healthcare SaaS, Cloud & AI Products</title>
+    <meta
+      name="description"
+      content="Abdullah Akram — Senior Full Stack Engineer based in Bayreuth, Germany. Building scalable healthcare SaaS, workflow automation platforms, AI-enabled products, and cloud-native systems with React, TypeScript, Node.js, and NestJS."
+    />
+    <meta name="author" content="Abdullah Akram" />
+    <meta name="robots" content="index, follow" />
+    <meta
+      name="keywords"
+      content="Senior Full Stack Engineer, React, TypeScript, Node.js, NestJS, Healthcare SaaS, Microservices, Cloud, AWS, Azure, Kubernetes, GraphQL, AI Engineer"
+    />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Abdullah Akram — Senior Full Stack Engineer" />
+    <meta
+      property="og:description"
+      content="Building scalable healthcare SaaS, workflow automation, AI-enabled products, and cloud-native systems."
+    />
+    <meta property="og:image" content="./og-image.png" />
+
+    <!-- Twitter -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Abdullah Akram — Senior Full Stack Engineer" />
+    <meta
+      name="twitter:description"
+      content="Healthcare SaaS · Workflow Automation · AI Products · Cloud-Native Systems"
+    />
+
+    <link rel="icon" type="image/svg+xml" href="./icons/favicon.svg" />
+
+    <script>
+      // Resolve theme synchronously before paint so the loader matches the saved mode.
+      (function () {
+        try {
+          var stored = localStorage.getItem("portfolio-theme");
+          var mode = stored === "dark" || stored === "light" ? stored : "light";
+          document.documentElement.setAttribute("data-theme", mode);
+        } catch (_) {
+          document.documentElement.setAttribute("data-theme", "light");
+        }
+      })();
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Abdullah Akram",
+        "jobTitle": "Senior Full Stack Engineer",
+        "email": "mailto:abdullah18x@gmail.com",
+        "telephone": "+491637216071",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Bayreuth",
+          "addressCountry": "Germany"
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/abd18x/",
+          "https://github.com/Abdullah18x",
+          "https://gitlab.com/abdullahEmumba"
+        ],
+        "knowsAbout": [
+          "React",
+          "TypeScript",
+          "Node.js",
+          "NestJS",
+          "Microservices",
+          "Healthcare SaaS",
+          "Cloud Architecture",
+          "AI Products"
+        ]
+      }
+    </script>
+    <style>
+      /* === Pre-mount loader (cycling word) === */
+      #app-loader {
+        position: fixed;
+        inset: 0;
+        z-index: 9999;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px;
+        background: #F7F9FC;
+        color: #1A1F2B;
+        font-family: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+        transition: opacity 0.45s ease;
+      }
+      html[data-theme="dark"] #app-loader { background: #0E0E14; color: #ECECF1; }
+      #app-loader.is-hiding { opacity: 0; pointer-events: none; }
+
+      .app-loader__orb {
+        position: relative;
+        width: 56px;
+        height: 56px;
+        border-radius: 50%;
+        background: conic-gradient(from 0deg, #4A7BD8, #8B6FD6, #4A7BD8);
+        animation: appLoaderSpin 1.4s linear infinite;
+        mask: radial-gradient(circle, transparent 52%, #000 53%);
+        -webkit-mask: radial-gradient(circle, transparent 52%, #000 53%);
+      }
+      .app-loader__orb::after {
+        content: "";
+        position: absolute; inset: -6px;
+        border-radius: 50%;
+        background: radial-gradient(circle, rgba(74,123,216,0.18), transparent 70%);
+        z-index: -1;
+        animation: appLoaderPulse 2s ease-in-out infinite;
+      }
+
+      .app-loader__word {
+        font-size: 0.95rem;
+        font-weight: 500;
+        letter-spacing: 0.01em;
+        color: inherit;
+        opacity: 0.9;
+        min-height: 1.4em;
+        animation: appLoaderWord 0.45s ease both;
+      }
+      .app-loader__word::after {
+        content: "";
+        display: inline-block;
+        width: 4px; height: 4px;
+        margin-left: 8px;
+        border-radius: 50%;
+        background: currentColor;
+        vertical-align: middle;
+        animation: appLoaderDot 1s ease-in-out infinite;
+      }
+
+      .app-loader__hint {
+        font-family: "JetBrains Mono", monospace;
+        font-size: 0.7rem;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        opacity: 0.45;
+      }
+
+      @keyframes appLoaderSpin { to { transform: rotate(360deg); } }
+      @keyframes appLoaderPulse {
+        0%, 100% { opacity: 0.6; transform: scale(1); }
+        50%      { opacity: 1;   transform: scale(1.15); }
+      }
+      @keyframes appLoaderWord {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 0.9; transform: translateY(0); }
+      }
+      @keyframes appLoaderDot {
+        0%, 100% { opacity: 0.2; }
+        50%      { opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .app-loader__orb, .app-loader__orb::after, .app-loader__word, .app-loader__word::after {
+          animation: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <div id="app-loader" aria-live="polite" aria-busy="true">
+      <div class="app-loader__orb" aria-hidden="true"></div>
+      <div id="app-loader-word" class="app-loader__word">Warming up</div>
+      <div class="app-loader__hint">Portfolio loading</div>
+    </div>
+    <script>
+      (function () {
+        var words = [
+          "Warming up", "Pondering", "Distilling", "Brewing coffee",
+          "Compiling thoughts", "Architecting pixels", "Marinating ideas",
+          "Caffeinating", "Polishing keystrokes", "Untangling promises",
+          "Calibrating colors", "Bundling dreams", "Hydrating state",
+          "Wrangling components", "Refactoring vibes", "Synthesizing magic",
+          "Recruiting bits", "Convincing CSS", "Aligning divs", "Almost there"
+        ];
+        var node = document.getElementById("app-loader-word");
+        var i = 0;
+        function tick() {
+          i = (i + 1) % words.length;
+          if (!node) return;
+          node.style.animation = "none";
+          // Force reflow to restart the animation
+          void node.offsetWidth;
+          node.style.animation = "";
+          node.textContent = words[i];
+        }
+        var interval = setInterval(tick, 700);
+        window.__stopAppLoader = function () {
+          clearInterval(interval);
+          var el = document.getElementById("app-loader");
+          if (!el) return;
+          el.classList.add("is-hiding");
+          setTimeout(function () { el.parentNode && el.parentNode.removeChild(el); }, 500);
+        };
+      })();
+    </script>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

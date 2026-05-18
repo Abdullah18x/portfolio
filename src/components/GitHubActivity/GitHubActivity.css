@@ -1,0 +1,89 @@
+.gh-activity {
+  margin-top: 32px;
+  padding: 22px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  transition: border-color .25s ease;
+}
+.gh-activity:hover { border-color: var(--accent); }
+
+.gh-icon {
+  width: 36px;
+  height: 36px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background: var(--surface-alt);
+  border: 1px solid var(--border);
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+/* === Contribution heatmap === */
+.gh-heatmap {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--surface-alt);
+  overflow-x: auto;
+}
+.gh-heatmap img {
+  display: block;
+  width: 100%;
+  min-width: 720px;   /* keep grid readable on small screens; horizontal scroll if needed */
+  height: auto;
+}
+
+/* === Stats + top-langs row === */
+.gh-stats-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin-top: 14px;
+}
+.gh-stat-card {
+  position: relative;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  background: var(--surface-alt);
+  min-height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.gh-stat-card--fallback {
+  background: var(--surface);
+  padding: 22px;
+}
+.gh-img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+}
+
+/* Theme-aware swap: light SVG is the default, dark SVG only in dark mode */
+.gh-img--dark { display: none; }
+html[data-theme="dark"] .gh-img--light { display: none; }
+html[data-theme="dark"] .gh-img--dark  { display: block; }
+
+/* === Link === */
+.gh-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: color .2s ease, transform .2s ease;
+}
+.gh-link:hover { transform: translateX(2px); }
+
+@media (max-width: 600px) {
+  .gh-stats-row { grid-template-columns: 1fr; }
+  .gh-activity { padding: 18px; }
+}
