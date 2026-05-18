@@ -147,38 +147,6 @@ in `src/data/resumeData.ts`):
 
 ---
 
-## Deployment
-
-Vite produces a static `dist/` folder, so any static host works.
-
-### Vercel (recommended)
-
-1. Push the repo to GitHub (private or public — Vercel handles both).
-2. Go to [vercel.com/new](https://vercel.com/new), import the repo.
-3. Vercel auto-detects Vite. Click **Deploy**. You get a `*.vercel.app` URL instantly.
-4. Every `git push` triggers a new deploy. PRs get preview URLs automatically.
-
-### Netlify
-
-1. New site → import from Git.
-2. Build command: `npm run build` · Publish directory: `dist`.
-
-### GitHub Pages
-
-```bash
-npm run deploy:gh
-```
-
-If the site is served from a sub-path (`username.github.io/portfolio`),
-update `base` in `vite.config.ts` to `'/portfolio/'` first.
-
-### Cloudflare Pages
-
-Connect the repo at [pages.cloudflare.com](https://pages.cloudflare.com).
-Framework: Vite. Build: `npm run build`. Output: `dist`.
-
----
-
 ## Conventions
 
 - **Each component has its own folder**, with `Component.tsx` and `Component.css`. Add new components the same way.
