@@ -1,4 +1,3 @@
-export type CertIssuer = 'hackerrank' | 'deeplearning-ai' | 'evs' | 'other';
 
 export type CertCategory =
   | 'Programming'
@@ -10,7 +9,7 @@ export type CertCategory =
 export interface Certification {
   name: string;
   issuer: string;
-  issuerKey: CertIssuer;
+  issuerKey: string;
   category: CertCategory;
   date?: string;
   credentialId?: string;
@@ -72,6 +71,15 @@ export const certificationsData: Certification[] = [
     credentialId: '0ca05a63-3689-4599-b3dd-04f93e63842e',
     url: 'https://learn.deeplearning.ai/accomplishments/0ca05a63-3689-4599-b3dd-04f93e63842e?usp=sharing',
     image: './images/ChatGPT Prompt Engineering for Developers.png',
+  },
+  {
+    name: 'Claude 101',
+    issuer: 'Anthropic',
+    issuerKey: 'anthropic',
+    category: 'AI',
+    credentialId: 'b46e46a28qrv',
+    url: 'https://verify.skilljar.com/c/b46e46a28qrv',
+    image: './images/claude101.png',
   },
   {
     name: 'Certified PHP Web Developer',
