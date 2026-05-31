@@ -28,13 +28,22 @@ export const certCategories: { value: CertCategory | 'All'; label: string }[] = 
 
 export const certificationsData: Certification[] = [
   {
+    name: 'JavaScript (Intermediate)',
+    issuer: 'HackerRank',
+    issuerKey: 'hackerrank',
+    category: 'Programming',
+    credentialId: 'C74E8B116901',
+    url: 'https://www.hackerrank.com/certificates/c74e8b116901',
+    image: './images/javascript_intermediate_certificate.png',
+  },
+  {
     name: 'JavaScript (Basic)',
     issuer: 'HackerRank',
     issuerKey: 'hackerrank',
     category: 'Programming',
     credentialId: '0ea8f0888378',
     url: 'https://www.hackerrank.com/certificates/0ea8f0888378',
-    image: './images/javascript_basic certificate.png',
+    image: './images/javascript_basic_certificate.png',
   },
   {
     name: 'Claude 101',
