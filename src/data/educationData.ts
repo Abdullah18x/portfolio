@@ -9,13 +9,13 @@ export interface EducationItem {
 
 export const educationData: EducationItem[] = [
   {
-    degree: "Master's in Computer Science",
-    institution: 'University of Bayreuth',
-    location: 'Bayreuth, Germany',
-    period: '2024 — Present',
+    degree: "Data Science (M.Sc.)",
+    institution: 'Universität Augsburg',
+    location: 'Augsburg, Germany',
+    period: '2026 — Present',
     status: 'ongoing',
     description:
-      'Currently pursuing an MS in Computer Science with focus areas around advanced software engineering, distributed systems, and applied AI — deepening the theoretical foundations behind my production engineering work.',
+      'Currently pursuing an MS in Data Science with focus on concepts and methods of data science, incorporating knowledge and methodology from Computer Science and Mathematics.',
   },
   {
     degree: "Bachelor's in Software Engineering",
